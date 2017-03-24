@@ -1,4 +1,77 @@
-p.sub-lead{
+p.sub-lead {
     text-decoration: underline;
-    font-weight: 700;    
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+p.sub-lead:hover {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+a:visited {
+    color: mediumturquoise;
+}
+
+.btn-facebook {
+    border: none;
+    background-color: #405d9b;
+    color: #f0f0f0;
+    box-shadow: 0px 0px 3px #777777;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.btn-facebook:hover {
+    box-shadow: 0px 0px 8px #777777;
+}
+
+
+/* Profile div */
+
+.profile-div {
+    /* jumping to left:*/
+    position: fixed;
+    left: -100%;
+    opacity: 0;
+    /* transition: all 0.5s;*/
+}
+
+.profile-div.show {
+    position: relative;
+    animation-name: facebook;
+    animation-duration: 0.5s;
+    left: 0;
+    opacity: 1;
+}
+
+.profile-div form {
+    width: 50%;
+    margin: 10px auto;
+}
+
+
+/* KeyFrames */
+
+@keyframes facebook {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+    25% {
+        opacity: 0;
+        left: -75%;
+    }
+    50% {
+        opacity: 0;
+        left: -50%;
+    }
+    75% {
+        opacity: 0.25;
+        left: -25%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
 }
